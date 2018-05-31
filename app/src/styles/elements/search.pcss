@@ -1,0 +1,321 @@
+.Search {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Input.Search-input {
+  max-width: 500px;
+  padding: 12px 50px 12px 12px;
+  background-position: calc(100% - 2px) center;
+  background-repeat: no-repeat;
+  background-image: url('../images/search.png');
+  width: 100%;
+  display: inline-block;
+}
+
+.Search-button {
+  width: 35px;
+  height: 35px;
+  font-size: 0;
+  position: absolute;
+  right: 5px;
+  display: block;
+  top: 5px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.Search-autocomplete {
+  margin-bottom: 20px;
+}
+
+.SearchHint {
+  display: inline-block;
+  position: relative;
+  color: var(--BrandGrayColor);
+  font-size: 14px;
+  background-image: url('../images/info.png');
+  background-repeat: no-repeat;
+  padding: 5px 0 5px 30px;
+}
+
+.SearchResults {
+  margin: 40px auto 0;
+  max-width: 1000px;
+}
+
+.SearchResults-loading {
+  display: block;
+  text-align: center;
+  font-family: 'PFDinDisplayProLight', Helvetica, Arial;
+  color: var(--BrandGrayColor);
+  font-size: 19px;
+}
+
+.SearchResultsItem {
+  display: flex;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: var(--BrandGrayColor);
+  padding: 10px 0;
+  text-decoration: none;
+
+  @media (--mobile) {
+    flex-direction: column;
+  }
+}
+
+.SearchResultsItem.Vehicle {
+  @media (--mobile) {
+    position: relative;
+  }
+}
+
+/* .SearchResultsItem.Client .SearchResultsItemPrimary { */
+/*   @media (--mobile) { */
+/*     align-items: flex-start; */
+/*   } */
+/* } */
+/*  */
+.SearchResultsItem.Client .SearchResultsItemSecondary {
+  @media (--mobile) {
+    margin-top: 5px;
+  }
+}
+
+.SearchResultsItemOuter:last-of-type .SearchResultsItem {
+  border-width: 1px 0 1px 0;
+}
+
+.SearchResultsItemPrimary {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  padding-right: 10px;
+
+  @media (--mobile) {
+    margin-bottom: 5px;
+  }
+}
+
+.SearchResultsItemPrimary.verticalAlign {
+  align-items: center;
+}
+
+.SearchResultsItemImage {
+  margin-right: 15px;
+}
+
+.SearchResultsItemImage img {
+  max-width: 40px;
+  border-radius: 50%;
+}
+
+.SearchResultsItemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.SearchResultsItemInfo.mobileVertical {
+  @media (--mobile) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.SearchResultsItemInfo-secondary {
+  display: flex;
+}
+
+.SearchResultsItemInfo-secondary.vertical {
+  flex-direction: column;
+}
+
+.SearchResultsItemInfo-title {
+  font-family: 'MagistralBold', Helvetica, Arial;
+  color: var(--BrandBlackColor);
+  font-size: 23px;
+  margin: 0;
+  word-break: break-all;
+
+  @media (--mobile) {
+    word-break: normal;
+  }
+}
+
+.SearchResultsItemInfo-title.noMargin {
+  margin: 0;
+}
+
+.SearchResultsItemInfo-balance {
+  display: block;
+  color: var(--BrandTurquoiseColor);
+}
+
+.SearchResultsItemInfo-balance:not(:empty) {
+  margin-top: 5px;
+}
+
+.SearchResultsItemInfo-edit {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+
+.SearchResultsItemInfo-name {
+  font-family: 'PFDinDisplayProLight', Helvetica, Arial;
+  margin-right: 40px;
+  color: var(--BrandGrayColor);
+  font-size: 19px;
+  margin-top: 5px;
+}
+
+.SearchResultsItemInfo-description {
+  font-family: 'PFDinDisplayProLight', Helvetica, Arial;
+  color: var(--BrandGrayColor);
+  font-size: 19px;
+  padding-right: 100px;
+}
+
+.SearchResultsItemInfo-phone {
+  font-family: 'PFDinDisplayProLight', Helvetica, Arial;
+  color: var(--BrandGrayColor);
+  font-size: 19px;
+  padding-left: 20px;
+  background-image: url('../images/phone.png');
+  background-repeat: no-repeat;
+  background-position: 0 2px;
+  margin-top: 5px;
+}
+
+.SearchResultsItemInfo-vehicle {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+  padding: 5px 0 0;
+
+  @media (--mobile) {
+    padding: 5px 0 0;
+  }
+}
+
+.SearchResultsItemInfo-vehicle em {
+  @media (--mobile) {
+    padding: 5px;
+  }
+}
+
+.SearchResultsItemInfo-vehicle-item {
+  background-color: var(--BrandTurquoiseColor);
+  border-radius: 3px;
+  color: var(--BrandWhiteColor);
+  padding: 7px 10px;
+  font-size: 17px;
+  margin: 5px;
+}
+
+.SearchResultsItemCarId {
+  font-family: 'MagistralBold', Helvetica, Arial;
+  color: var(--BrandBlackColor);
+  font-size: 23px;
+}
+
+.SearchResultsItemInfo-title.Inline--centered {
+  margin-right: 10px;
+}
+
+.SearchResultsItemCarId.ClientCarId {
+  @media (--mobile) {
+    font-size: 20px;
+    margin-top: -8px;
+  }
+}
+
+.SearchResultsItemEditLimit .Input {
+  width: 120px;
+  margin-right: 10px;
+}
+
+.SearchResultsItemSecondary {
+  display: flex;
+  align-items: center;
+
+  @media (--mobile) {
+    padding-left: 55px;
+  }
+}
+
+.SearchResultsItemSecondary.right {
+  text-align: right;
+
+  @media (--mobile) {
+    text-align: left;
+  }
+}
+
+.SearchResultsItemSecondary.centered {
+  text-align: center;
+  align-items: center;
+
+  @media (--mobile) {
+    text-align: left;
+    margin-top: 5px;
+  }
+}
+
+.SearchResultsItemSecondary > div + div {
+  margin-left: 10px;
+  
+  @media (--mobile) {
+    margin-left: 5px;
+  }
+}
+
+.SearchResultsItemSecondary.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.SearchResultsItemSecondary.verticalAlign {
+  display: flex;
+  align-items: center;
+}
+
+.Clients {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.Clients h3 {
+  font-family: 'MagistralBold', Helvetica, Arial;
+  color: var(--BrandBlackColor);
+  font-size: 23px;
+  margin: 0 0 10px;
+}
+
+.Clients span {
+  font-family: 'PFDinDisplayProLight', Helvetica, Arial;
+  color: var(--BrandGrayColor);
+  font-size: 19px;
+  padding-left: 20px;
+  background-image: url('../images/phone.png');
+  background-repeat: no-repeat;
+  background-position: 0 2px;
+}
+
+.Clients-empty-vehicles {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: var(--BrandGrayColor);
+}

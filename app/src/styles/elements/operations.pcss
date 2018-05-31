@@ -1,0 +1,136 @@
+.Operations {
+  margin: 40px auto 0;
+  max-width: 1000px;
+
+  @media (--mobile) {
+    margin: 0 auto;
+  }
+}
+
+.OperationsItem {
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: var(--BrandGrayColor);
+  padding: 10px 0;
+}
+
+.OperationsItemTop {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.OperationsItem:last-of-type {
+  border-width: 1px 0 1px 0;
+}
+
+.OperationsItemTop {
+  display: flex;
+  justify-content: space-between;
+
+  @media (--mobile) {
+    flex-direction: column;
+  }
+}
+
+.OperationsItemPrimary {
+  display: flex;
+
+  @media (--mobile) {
+    margin-bottom: 5px;
+  }
+}
+
+.OperationsItemSecondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+
+  @media (--mobile) {
+    padding-left: 55px;
+    text-align: left;
+  }
+}
+
+.OperationsItemImage {
+  margin-right: 15px;
+}
+
+.OperationsItemImage img {
+  max-width: 40px;
+  border-radius: 50%;
+}
+
+.OperationsItemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.OperationsItemInfo-title {
+  font-family: 'MagistralBold', Helvetica, Arial;
+  color: var(--BrandBlackColor);
+  font-size: 23px;
+  margin: 0 0 10px;
+  word-break: break-all;
+}
+
+.OperationsItemInfo-name {
+  margin-bottom: 5px;
+}
+
+.OperationsItemInfo-name,
+.OperationsItemInfo-carid {
+  font-family: 'PFDinDisplayProLight', Helvetica, Arial;
+  color: var(--BrandGrayColor);
+  font-size: 19px;
+}
+
+.OperationsItemSecondary-create-date {
+  font-family: 'MagistralBold', Helvetica, Arial;
+  color: var(--BrandBlackColor);
+  font-size: 23px;
+
+  @media (--mobile) {
+    margin-bottom: 5px;
+  }
+}
+
+.OperationsItemSecondary-confirm-date {
+  font-family: 'PFDinDisplayProLight', Helvetica, Arial;
+  color: var(--BrandTurquoiseColor);
+  font-size: 19px;
+}
+
+.OperationsItemBottom {
+  padding: 10px 0 0 55px;
+
+  @media (--tablet) {
+    padding: 5px 0 0 55px;
+  }
+}
+
+.OperationsItemBottom .Button {
+  margin-left: 20px;
+
+  @media (--tablet) {
+    margin: 5px 0;
+    display: block;
+  }
+}
+
+.OperationsItemBottom .Input {
+  width: 120px;
+}
+
+.smsBlockMessage {
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: middle;
+
+  @media (--tablet) {
+    margin-left: 0;
+  }
+}

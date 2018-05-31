@@ -1,0 +1,73 @@
+table {
+  width: 100%;
+}
+
+table td {
+  padding: 0;
+}
+
+.Table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.Table td,
+.Table th {
+  padding: 20px;
+
+  @media (--mobile) {
+    padding: 10px 5px;
+  }
+}
+
+.Table td.NoPaddingTd {
+  padding: 0;
+}
+
+.Table td > table tr th,
+.Table td > table tr td {
+  border-bottom: none !important;
+}
+
+.Table td > table tr td {
+  width: 80%;
+}
+
+.Table th {
+  border-bottom: 2px solid var(--BrandBlackColor);
+}
+
+.Table tr:not(:last-of-type) td {
+  border-bottom: 1px solid var(--BrandBlackColor);
+}
+
+.NewOperations-table {
+  margin-bottom: 15px;
+  border-collapse: collapse;
+}
+
+.NewOperations-table td {
+  width: 33%;
+
+  @media (--mobile) {
+    display: table-row;
+    width: 100%;
+  }
+}
+
+.NewOperations-table td:not(:first-of-type) > label {
+  
+  @media (--mobile) {
+    margin-top: 10px;
+  }
+}
+
+.NewOperations-table td + td {
+  padding-left: 10px;
+}
+
+.NewOperations-table td input {
+  width: 100%;
+  max-width: 100%;
+}
